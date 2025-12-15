@@ -54,5 +54,5 @@ predicted_price = ridge.predict([sample])[0]
 print("Predicted Price:", predicted_price)
 print("Actual Price:", y_test.iloc[5])
 
-# coeffs = pd.Series(lr.coef_, index=X.columns)
-# print(coeffs.sort_values(ascending=False).head(10))
+coeffs = pd.Series(ridge.coef_, index=X.columns)
+print(coeffs.sort_values(ascending=False).head(10))
